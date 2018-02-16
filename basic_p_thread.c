@@ -4,6 +4,7 @@
 
 void *sampleFunc()
 {
+	sleep(1);
 	printf("hello\n");
 }
 
