@@ -4,7 +4,7 @@
 
 void *sampleFunc()
 {
-	sleep(1);
+//	sleep(1);
 	printf("hello\n");
 }
 
@@ -12,8 +12,10 @@ void main()
 
 {
 	int i;
-	pthread_t thread_id;
+	pthread_t thread_id[3];
 	for(i=0;i<3;i++)
-		pthread_create(&thread_id,NULL,sampleFunc,NULL);
-	pthread_join(thread_id,NULL);
+	{
+		pthread_create(&thread_id[i],NULL,sampleFunc,NULL);
+		pthread_join(thread_id[i],NULL);
+	}
 }
