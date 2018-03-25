@@ -11,7 +11,7 @@ public class Link{
 
 		c = new int[v][v];
 		r = new int[v][2];
-	        visited = new boolean[v];
+	  visited = new boolean[v];
 
 		System.out.println("Enter the cost matrix:");
 		for(i=0;i<v;i++){
@@ -41,7 +41,13 @@ public class Link{
 		System.out.println("Enter source:");
 		source = scan.nextInt();
 
-		
+
+		for(i=0;i<v;i++){
+			r[0][i] = c[u][i];
+			
+		}
+
+
 
 	}
 
