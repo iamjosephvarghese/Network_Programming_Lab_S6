@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Link{
 	public static void main(String args[]){
-		int v,i,j,k,source=0;
+		int v,i,j,k,source;
 		int[][] c,r;
 		boolean[] visited;
                 Scanner scan = new Scanner(System.in);
@@ -10,17 +10,17 @@ public class Link{
 		v = scan.nextInt();
 
 		c = new int[v][v];
-		r = new int[v][3];
+		r = new int[v][2];
 	        visited = new boolean[v];
-	
+
 		System.out.println("Enter the cost matrix:");
 		for(i=0;i<v;i++){
 			for(j=0;j<v;j++){
-				if(i==j)
-					c[i][j] = 0;
-				else{
+				// if(i==j)
+				// 	c[i][j] = 0;
+				// else{
 				        c[i][j] = scan.nextInt();
-				}
+				// }
 			}
 		}
 
@@ -37,7 +37,11 @@ public class Link{
 			System.out.println();
 		}
 
-		calculate();
+
+		System.out.println("Enter source:");
+		source = scan.nextInt();
+
+		
 
 	}
 
