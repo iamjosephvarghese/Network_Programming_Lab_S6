@@ -6,7 +6,7 @@ import java.applet.*;
 */
 public class AppletOne extends Applet {
 public void paint(Graphics g) {
-setBackground(Color.green);
+setBackground(Color.blue);
 g.setColor(Color.black);
 g.drawString("Hello World", 20, 20);
 }
